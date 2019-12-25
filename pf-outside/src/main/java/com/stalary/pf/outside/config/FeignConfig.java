@@ -24,7 +24,7 @@ public class FeignConfig {
     @Bean
     public Retryer feignRetryer() {
         // 重试3次
-        return new Retryer.Default(100, 1000, 3);
+        return new Retryer.Default(100, 1000, 1);
     }
 
     @Bean
