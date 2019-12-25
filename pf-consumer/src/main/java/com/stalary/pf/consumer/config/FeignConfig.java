@@ -17,14 +17,14 @@ public class FeignConfig {
 
     @Bean
     public Request.Options options() {
-        // 超时10s
-        return new Request.Options(20000, 10000);
+        // 超时20s
+        return new Request.Options(20000, 20000);
     }
 
     @Bean
     public Retryer feignRetryer() {
-        // 重试3次
-        return new Retryer.Default(100, 1000, 3);
+        // 重试0次
+        return new Retryer.Default(100, 1000, 0);
     }
 
     @Bean
