@@ -1,21 +1,26 @@
 server:
+  debug: true
   port: 10015
   max-http-header-size: 8192
-  user: http://usercenter.stalary.com
+  user: 127.0.0.1:7100
 spring:
   cloud:
     nacos:
       discovery:
-        server-addr: nacos.stalary.com
+        server-addr: 127.0.0.1:8848
     sentinel:
       transport:
         port: 10003
         dashboard: sentinel.stalary.com
   zipkin:
-    base-url: http://zipkin.stalary.com
+    base-url: 127.0.0.1:9411
   sleuth:
     sampler:
       probability: 1.0
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 127.0.0.1:9300
 logging:
   level:
     com.stalary.pf.user.client: DEBUG # feign日志

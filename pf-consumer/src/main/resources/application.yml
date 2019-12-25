@@ -5,9 +5,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: nacos.stalary.com
+        server-addr: 127.0.0.1:8848
   zipkin:
-    base-url: http://zipkin.stalary.com
+    base-url: 127.0.0.1:9411
   sleuth:
     sampler:
       probability: 1.0
@@ -21,4 +21,4 @@ com:
       order: true
       group: master
       auto: true
-      url: lightmq.stalary.com
+      url: http://localhost:8001

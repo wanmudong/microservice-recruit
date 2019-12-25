@@ -2,7 +2,7 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: nacos.stalary.com
+        server-addr: 127.0.0.1:8848
         file-extension: yml
         shared-dataids: auth.yml,printlog.yml,gateway.yml
         refreshable-dataids: auth.yml,gateway.yml
